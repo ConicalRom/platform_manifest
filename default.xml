@@ -6,14 +6,14 @@
 
   <remote name="github"
 	  fetch="git://github.com/ConicalRom" 
-	  revision="Android-2.3.3_r1"
 	/>
+
   <default revision="refs/tags/android-2.3.3_r1"
            remote="korg" />
 
-  <project path="vendor/conical" name="platform_vendor_conical" remote="github"/>
-  <project path="frameworks/base" name="platform_frameworks_base" remote="github"/>
-  <project path="packages/apps/Iconics" name="platform_packages_apps_iconics" remote="github"/>
+  <project path="vendor/conical" name="platform_vendor_conical" remote="github" revision="Android-2.3.3_r1" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="github" revision="Android-2.3.3_r1" />
+  <project path="packages/apps/Iconics" name="platform_packages_apps_iconics" remote="github" revision="Android-2.3.3_r1" />
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />

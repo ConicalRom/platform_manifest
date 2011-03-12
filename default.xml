@@ -3,10 +3,16 @@
   <remote  name="korg"
            fetch="git://android.git.kernel.org/"
            review="review.source.android.com" />
+
+  <remote name="github"
+	  fetch="git://github.com/ConicalRom" 
+	/>
+
   <default revision="gingerbread"
            remote="korg" />
 
-  <project path="build" name="platform/build">
+
+  <project path="build" name="platform_build" remote="github" revision="Android-2.3.3_r1">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="bionic" name="platform/bionic" />
@@ -20,6 +26,7 @@
   <project path="device/htc/common" name="device/htc/common" />
   <project path="device/htc/passion" name="device/htc/passion" />
   <project path="device/htc/passion-common" name="device/htc/passion-common" />
+  <project path="device/htc/inc" name="android_device_htc_inc" remote="github" revision="Android-2.3.3_r1"/>
   <project path="device/sample" name="device/sample" />
   <project path="device/samsung/crespo" name="device/samsung/crespo" />
   <project path="external/apache-http" name="platform/external/apache-http" />
@@ -83,7 +90,7 @@
   <project path="external/ppp" name="platform/external/ppp" />
   <project path="external/proguard" name="platform/external/proguard" />
   <project path="external/protobuf" name="platform/external/protobuf" />
-  <project path="external/qemu" name="platform/external/qemu" revision="tools_r7" />
+  <project path="external/qemu" name="platform/external/qemu" revision="tools_r7"/>
   <project path="external/quake" name="platform/external/quake" />
   <project path="external/safe-iop" name="platform/external/safe-iop" />
   <project path="external/skia" name="platform/external/skia" />
@@ -105,20 +112,21 @@
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="github" revision="Android-2.3.3_r1" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
   <project path="hardware/msm7k" name="platform/hardware/msm7k" />
-  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" />
+  <project path="hardware/qcom/gps" name="platform_hardware_qcom_gps" remote="github" revision="Android-2.3.3_r1" />
   <project path="hardware/qcom/media" name="platform/hardware/qcom/media" />
   <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
+  <project path="packages/apps/Iconics" name="platform_packages_apps_iconics" remote="github" revision="Android-2.3.3_r1" />
   <project path="packages/apps/AccountsAndSyncSettings" name="platform/packages/apps/AccountsAndSyncSettings" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
@@ -138,10 +146,10 @@
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
-  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
+  <project path="packages/apps/Protips" name="platform_packages_apps_protips"  remote="github" revision="Android-2.3.3_r1"/>
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_settings" remote="github" revision="Android-2.3.3_r1"/>
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
@@ -173,5 +181,9 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
   <project path="system/wlan/ti" name="platform/system/wlan/ti" />
+
+
+<project path="vendor/conical" name="platform_vendor_conical" remote="github" revision="Android-2.3.3_r1" />
+
 
 </manifest>

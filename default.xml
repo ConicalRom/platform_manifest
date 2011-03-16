@@ -185,5 +185,5 @@
   <project path="system/wlan/ti" name="platform/system/wlan/ti" />
 
 <project path="vendor/conical" name="platform_vendor_conical" remote="origin"  />
-
+<project path="vendor/htc" name="platform_vendor_htc" remote="origin" />
 </manifest>
